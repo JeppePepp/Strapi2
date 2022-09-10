@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supplier_types",
+  "info": {
+    "singularName": "supplier-type",
+    "pluralName": "supplier-types",
+    "displayName": "Leverantörstyper",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "suppliers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::supplier.supplier",
+      "mappedBy": "supplier_type"
+    },
+    "migration_id": {
+      "type": "integer"
+    }
+  }
+}

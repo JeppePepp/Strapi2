@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "suppliers",
+  "info": {
+    "singularName": "supplier",
+    "pluralName": "suppliers",
+    "displayName": "Leverantör",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files", "videos"]
+    },
+    "streetAddress": {
+      "type": "string"
+    },
+    "postalAddress": {
+      "type": "string"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "phone1": {
+      "type": "string"
+    },
+    "phone2": {
+      "type": "string"
+    },
+    "email1": {
+      "type": "email"
+    },
+    "email2": {
+      "type": "email"
+    },
+    "website": {
+      "type": "string"
+    },
+    "organisationnumber": {
+      "type": "string"
+    },
+    "externalText": {
+      "type": "richtext"
+    },
+    "agreementText": {
+      "type": "richtext"
+    },
+    "supplier_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::supplier-type.supplier-type",
+      "inversedBy": "suppliers"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "supplier"
+    },
+
+    "supplier_contacts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::supplier-contact.supplier-contact",
+      "mappedBy": "supplier"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "helpepost": {
+      "type": "string"
+    },
+    "agentlogin": {
+      "type": "string"
+    },
+    "agentweb": {
+      "type": "string"
+    }
+  }
+}

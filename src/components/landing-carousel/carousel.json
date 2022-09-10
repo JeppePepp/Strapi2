@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_landing_carousel_carousels",
+  "info": {
+    "displayName": "Carousel",
+    "icon": "crown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    },
+    "external": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

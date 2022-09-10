@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "landings",
+  "info": {
+    "singularName": "landing",
+    "pluralName": "landings",
+    "displayName": "landing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Carousel": {
+      "displayName": "Carousel",
+      "type": "component",
+      "repeatable": true,
+      "component": "landing-carousel.carousel"
+    }
+  }
+}
